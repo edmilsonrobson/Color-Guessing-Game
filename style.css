@@ -73,3 +73,13 @@ button:hover{
     color: white;
     background: steelblue;
 }
+
+footer{
+    margin-top: 20px;
+    text-align: center;
+    clear: both;
+}
+
+footer a{
+    color: inherit;
+}
