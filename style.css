@@ -32,6 +32,7 @@ h1{
     text-align: center;
     background: steelblue;
     text-transform: uppercase;
+    transition: background 0.4s;
 }
 
 #current-color-text{
@@ -47,13 +48,17 @@ h1{
 }
 
 #game-message, button{
-    color: steelblue;
-    font-size: 1.2em;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+
+#game-message{
+    color: black;
+}
 button {
+    font-size: 1.2em;
+    color: steelblue;
     border: none;
     background: none;
     height: 100%;

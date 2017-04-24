@@ -1,6 +1,7 @@
 var squares = document.getElementsByClassName("game-square");
 var gameMessage = document.getElementById("game-message");
 var currentColorText = document.getElementById("current-color-text");
+var title = document.getElementById("main-title");
 var correctColorRGB;
 var correctSquareIndex;
 
@@ -23,6 +24,7 @@ function implementClickListeners(){
         squares[i].addEventListener("click", function(){
             if (this.style.background == correctColorRGB){
                 displayVictoryMessage();
+                onWinGame();
             } else{
                 displayFailMessage();
                 this.style.background = "transparent";
@@ -32,18 +34,33 @@ function implementClickListeners(){
 }
 
 function displayVictoryMessage(){
-    displayMessage("Correct!")
+    var successMessages = ["Yup!", "You did it!", "Great job!", "Awesome!", "You rule!"]
+    var randomIndex = Math.floor(Math.random()*successMessages.length);
+    displayMessage(successMessages[randomIndex])
 }
 
 function displayFailMessage(){
-    displayMessage("Nope.")
+    var successMessages = ["Nope.", "Wrong!", "Sorry, that was wrong.", "Erm.. no.", "Try harder."]
+    var randomIndex = Math.floor(Math.random()*successMessages.length);
+    displayMessage(successMessages[randomIndex])
 }
 
 function displayMessage(msg){
     gameMessage.textContent = msg;
 }
 
+function onWinGame(){
+    for (var i = 0 ; i < squares.length ; i++){
+        squares[i].style.background = correctColorRGB;
+    }
+
+    title.style.background = correctColorRGB;
+}
+
 function resetGame(){
+    title.style.background = "steelblue";
+    displayMessage("");
+
     correctColorRGB = generateRandomRGB();
     correctSquareIndex = Math.floor(Math.random()*squares.length)
     currentColorText.textContent = correctColorRGB;
