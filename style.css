@@ -1,0 +1,37 @@
+body{
+    color: white;
+    background-color: #232323;
+}
+
+.container {
+    text-align: center;
+}
+
+.rgb-text {
+    font-size: 7rem;
+}
+
+.game-header {
+    background-color: #4178AA;
+}
+
+.button-bar{
+    background-color: white;
+    height: 30px;
+}
+
+.squares-container{
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.game-square{
+
+    background: purple;
+    width: 30%;
+    padding-bottom: 30%;
+    float: left;
+    margin: 1.66%;
+    border-radius: 12px;
+
+}
