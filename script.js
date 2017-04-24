@@ -6,7 +6,10 @@ var correctColorRGB;
 var correctSquareIndex;
 
 var newColorsButton = document.getElementById("new-colors-button");
-newColorsButton.addEventListener("click", resetGame);
+newColorsButton.addEventListener("click", function(){
+    document.activeElement.blur();
+    resetGame();
+});
 
 implementClickListeners();
 resetGame();
