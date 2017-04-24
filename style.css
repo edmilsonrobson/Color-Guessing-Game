@@ -1,37 +1,71 @@
 body{
     color: white;
     background-color: #232323;
+    margin: 0;
+    font-family: "Lato";
 }
 
-.container {
-    text-align: center;
-}
 
-.rgb-text {
-    font-size: 7rem;
-}
-
-.game-header {
-    background-color: #4178AA;
-}
-
-.button-bar{
-    background-color: white;
-    height: 30px;
-}
 
 .squares-container{
-    margin: 0 auto;
+    text-align: center;
+    margin: 20px auto;
     max-width: 600px;
 }
 
 .game-square{
 
     background: purple;
-    width: 30%;
-    padding-bottom: 30%;
+    width: 25%;
+    padding-bottom: 25%;
     float: left;
     margin: 1.66%;
-    border-radius: 12px;
+    border-radius: 15%;
+/*    border: 2px solid lightgray;*/
+    transition: background 0.4s;
 
+}
+
+h1{
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+    background: steelblue;
+    text-transform: uppercase;
+}
+
+#current-color-text{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+#stripe{
+    background: white;
+    height: 30px;
+    text-align: center;
+}
+
+#game-message, button{
+    color: steelblue;
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+button {
+    border: none;
+    background: none;
+    height: 100%;
+    transition: all 0.2s;
+}
+
+#game-message{
+    display:inline-block;
+    width: 20%;
+}
+
+button:hover{
+    color: white;
+    background: steelblue;
 }
